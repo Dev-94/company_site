@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Title from './Components/Title'
-import Form from './Components/Form'
-import { Route, Link, BrowserRoute as Router } from 'react-router-dom'
+import { BrowserRouter as Switch, Router, Route, Link } from 'react-router-dom'
+
+// import Title from './Components/Title'
+// import Form from './Components/Form'
+// import { Route, Link, BrowserRoute as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
