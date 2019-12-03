@@ -15,17 +15,21 @@ class Form extends React.Component {
     // handleOnChange(typing)
     // handing submit
 
-    handleOnChange() {
-
+    handleOnChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
 
-    onSubmit() {
+    handleSubmit(e) {
+        e.preventDefault()
+        console.log(e)
 
     }
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <h1>Form</h1>
                 <label>Name</label>
                 <input
@@ -40,7 +44,7 @@ class Form extends React.Component {
                     type='text'
                     value='email'
                     onChange={this.handleOnChange}
-                    value={this.name}
+                    value={this.email}
                 />
 
                 <label>Phone Number</label>
@@ -48,7 +52,7 @@ class Form extends React.Component {
                     type='text'
                     value='phone'
                     onChange={this.handleOnChange}
-                    value={this.name}
+                    value={this.phone}
                 />
 
                 <label>Subject</label>
@@ -56,7 +60,7 @@ class Form extends React.Component {
                     type='text'
                     value='subject'
                     onChange={this.handleOnChange}
-                    value={this.name}
+                    value={this.subject}
                 />
 
                 <label>Comment</label>
@@ -64,10 +68,10 @@ class Form extends React.Component {
                     type='text'
                     value='comment'
                     onChange={this.handleOnChange}
-                    value={this.name}
+                    value={this.comment}
                 />
 
-                <input type='button' value='Submit' />
+                <input type='button' value='Submit' onSubmit={this.handleSubmit} />
 
             </form >
         )
