@@ -14,17 +14,24 @@ class Form extends React.Component {
 
     // handleOnChange(typing)
     // handling submit
-    handleOnChange(event) {
+    handleOnChange = (event) => {
+        const target = event.target
+        console.log('target: ' + target)
+        const value = target.value
+        console.log("value: " + value)
+        const name = target.name
+        console.log("name: " + name)
+
         this.setState({
-            [event.target.name]: event.target.value
+            [name]: value
         })
     }
 
 
 
-    handleSubmit(e) {
-        e.preventDefault()
-        console.log(e)
+    handleSubmit(event) {
+        event.preventDefault()
+        console.log(event)
 
     }
 
@@ -35,7 +42,7 @@ class Form extends React.Component {
                 <label>Name</label>
                 <input
                     type='text'
-                    value='name'
+                    name='name'
                     onChange={this.handleOnChange}
                     value={this.state.name}
                 />
@@ -43,7 +50,7 @@ class Form extends React.Component {
                 <label>Email</label>
                 <input
                     type='text'
-                    value='email'
+                    name='email'
                     onChange={this.handleOnChange}
                     value={this.state.email}
                 />
@@ -51,7 +58,7 @@ class Form extends React.Component {
                 <label>Phone Number</label>
                 <input
                     type='text'
-                    value='phone'
+                    name='phone'
                     onChange={this.handleOnChange}
                     value={this.state.phone}
                 />
@@ -59,7 +66,7 @@ class Form extends React.Component {
                 <label>Subject</label>
                 <input
                     type='text'
-                    value='subject'
+                    name='subject'
                     onChange={this.handleOnChange}
                     value={this.state.subject}
                 />
@@ -67,7 +74,7 @@ class Form extends React.Component {
                 <label>Comment</label>
                 <input
                     type='text'
-                    value='comment'
+                    name='comment'
                     onChange={this.handleOnChange}
                     value={this.state.comment}
                 />
