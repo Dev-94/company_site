@@ -13,13 +13,14 @@ class Form extends React.Component {
     }
 
     // handleOnChange(typing)
-    // handing submit
-
-    handleOnChange(e) {
+    // handling submit
+    handleOnChange(event) {
         this.setState({
-            [e.target.name]: e.target.value
+            [event.target.name]: event.target.value
         })
     }
+
+
 
     handleSubmit(e) {
         e.preventDefault()
@@ -36,7 +37,7 @@ class Form extends React.Component {
                     type='text'
                     value='name'
                     onChange={this.handleOnChange}
-                    value={this.name}
+                    value={this.state.name}
                 />
 
                 <label>Email</label>
@@ -44,7 +45,7 @@ class Form extends React.Component {
                     type='text'
                     value='email'
                     onChange={this.handleOnChange}
-                    value={this.email}
+                    value={this.state.email}
                 />
 
                 <label>Phone Number</label>
@@ -52,7 +53,7 @@ class Form extends React.Component {
                     type='text'
                     value='phone'
                     onChange={this.handleOnChange}
-                    value={this.phone}
+                    value={this.state.phone}
                 />
 
                 <label>Subject</label>
@@ -60,7 +61,7 @@ class Form extends React.Component {
                     type='text'
                     value='subject'
                     onChange={this.handleOnChange}
-                    value={this.subject}
+                    value={this.state.subject}
                 />
 
                 <label>Comment</label>
@@ -68,10 +69,10 @@ class Form extends React.Component {
                     type='text'
                     value='comment'
                     onChange={this.handleOnChange}
-                    value={this.comment}
+                    value={this.state.comment}
                 />
 
-                <input type='button' value='Submit' onSubmit={this.handleSubmit} />
+                <input type='submit' value='Submit' />
 
             </form >
         )
