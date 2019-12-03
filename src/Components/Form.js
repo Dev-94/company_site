@@ -8,7 +8,7 @@ class Form extends React.Component {
         email: '',
         phone: '',
         subject: '',
-        comment: ''
+        comment: '',
 
     }
 
@@ -32,19 +32,40 @@ class Form extends React.Component {
                     type='text'
                     value='name'
                     onChange={this.handleOnChange}
-                    value={this.name} />
+                    value={this.name}
+                />
 
                 <label>Email</label>
-                <input />
+                <input
+                    type='text'
+                    value='email'
+                    onChange={this.handleOnChange}
+                    value={this.name}
+                />
 
-                <label>Phone</label>
-                <input />
+                <label>Phone Number</label>
+                <input
+                    type='text'
+                    value='phone'
+                    onChange={this.handleOnChange}
+                    value={this.name}
+                />
 
                 <label>Subject</label>
-                <input />
+                <input
+                    type='text'
+                    value='subject'
+                    onChange={this.handleOnChange}
+                    value={this.name}
+                />
 
                 <label>Comment</label>
-                <input />
+                <input
+                    type='text'
+                    value='comment'
+                    onChange={this.handleOnChange}
+                    value={this.name}
+                />
 
                 <input type='button' value='Submit' />
 
