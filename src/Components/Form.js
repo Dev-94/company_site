@@ -1,4 +1,7 @@
 import React from 'react';
+import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import Recaptcha from 'react-google-invisible-recaptcha'
+
 
 
 class Form extends React.Component {
@@ -8,6 +11,7 @@ class Form extends React.Component {
         phone: '',
         subject: '',
         comment: '',
+        messageSent: false
 
     }
 
@@ -79,6 +83,7 @@ class Form extends React.Component {
                 />
 
                 <input type='submit' value='Submit' />
+
 
             </form >
         )
