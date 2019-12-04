@@ -1,6 +1,5 @@
 import React from 'react';
-import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
-import Recaptcha from 'react-google-invisible-recaptcha'
+
 
 
 
@@ -11,7 +10,6 @@ class Form extends React.Component {
         phone: '',
         subject: '',
         comment: '',
-        messageSent: false
 
     }
 
@@ -19,12 +17,11 @@ class Form extends React.Component {
     // handling submit
     handleOnChange = (event) => {
         const target = event.target
-        console.log('target: ' + target)
+        // console.log('target: ' + target)
         const value = target.value
-        console.log("value: " + value)
+        // console.log("value: " + value)
         const name = target.name
-        console.log("name: " + name)
-
+        // console.log("name: " + name)
         this.setState({
             [name]: value
         })
@@ -34,6 +31,7 @@ class Form extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault()
+        // this.recaptcha.exectute()
         console.log(event)
 
     }
@@ -83,6 +81,7 @@ class Form extends React.Component {
                 />
 
                 <input type='submit' value='Submit' />
+
 
 
             </form >
