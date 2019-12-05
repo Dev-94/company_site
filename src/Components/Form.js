@@ -12,43 +12,37 @@ class Form extends React.Component {
         phone: '',
         subject: '',
         comment: '',
-
     }
 
-    // handleOnChange(typing)
-    // handling submit
+
     handleOnChange = (event) => {
         const target = event.target
-        // console.log('target: ' + target)
         const value = target.value
-        // console.log("value: " + value)
         const name = target.name
-        // console.log("name: " + name)
         this.setState({
             [name]: value
         })
     }
 
 
-
     handleSubmit(event) {
         event.preventDefault()
-        // this.recaptcha.exectute()
         console.log(event.target)
 
     }
 
     verifyCallback = (recaptchaToken) => {
-        // Here you will get the final recaptchaToken!!!  
-        console.log(recaptchaToken, "<= your recaptcha token")
+        console.log('recaptcha token: ' + recaptchaToken)
     }
-
 
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
+
                 <h1>Please contact us to learn more about what we do!</h1>
+                <br />
+
                 <label>Name</label>
                 <br />
 
@@ -59,12 +53,10 @@ class Form extends React.Component {
                     value={this.state.name}
                 />
                 <br />
-
                 <br />
+
                 <label>Email</label>
                 <br />
-
-
                 <input
                     type='text'
                     name='email'
@@ -77,8 +69,6 @@ class Form extends React.Component {
 
                 <label>Phone Number</label>
                 <br />
-
-
                 <input
                     type='text'
                     name='phone'
@@ -88,30 +78,31 @@ class Form extends React.Component {
                 <br />
                 <br />
 
+
                 <label>Subject</label>
                 <br />
-
                 <input
                     type='text'
                     name='subject'
                     onChange={this.handleOnChange}
                     value={this.state.subject}
                 />
-                <br />                <br />
+                <br />
+                <br />
 
 
                 <label>Comment</label>
                 <br />
-
                 <input
                     type='text'
                     name='comment'
                     onChange={this.handleOnChange}
                     value={this.state.comment}
+                    errortext={this.state.comment}
                 />
-                <br />
-                <br />
 
+                <br />
+                <br />
 
                 <input className="button" type='submit' value='Submit' />
 
@@ -119,13 +110,9 @@ class Form extends React.Component {
                     sitekey='6LcNJMYUAAAAAC0y9fEVN3DI-5uD8iSvydiOKxCf'
                     verifyCallback={this.verifyCallback}
                 />
-
-
-
             </form >
         )
     }
-
 }
 
 export default Form
