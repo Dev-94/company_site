@@ -48,7 +48,7 @@ class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1>Form</h1>
+                <h1>Please contact us to learn more about what we do!</h1>
                 <label>Name</label>
                 <br />
 
@@ -59,8 +59,11 @@ class Form extends React.Component {
                     value={this.state.name}
                 />
                 <br />
+
+                <br />
                 <label>Email</label>
                 <br />
+
 
                 <input
                     type='text'
@@ -69,9 +72,12 @@ class Form extends React.Component {
                     value={this.state.email}
                 />
                 <br />
+                <br />
+
 
                 <label>Phone Number</label>
                 <br />
+
 
                 <input
                     type='text'
@@ -79,6 +85,7 @@ class Form extends React.Component {
                     onChange={this.handleOnChange}
                     value={this.state.phone}
                 />
+                <br />
                 <br />
 
                 <label>Subject</label>
@@ -90,7 +97,8 @@ class Form extends React.Component {
                     onChange={this.handleOnChange}
                     value={this.state.subject}
                 />
-                <br />
+                <br />                <br />
+
 
                 <label>Comment</label>
                 <br />
