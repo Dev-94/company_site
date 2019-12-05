@@ -1,6 +1,8 @@
 import React from 'react';
 import { ReCaptcha } from 'react-recaptcha-v3'
 
+import './Form.css'
+
 
 
 class Form extends React.Component {
@@ -32,7 +34,7 @@ class Form extends React.Component {
     handleSubmit(event) {
         event.preventDefault()
         // this.recaptcha.exectute()
-        console.log(event)
+        console.log(event.target)
 
     }
 
@@ -103,7 +105,7 @@ class Form extends React.Component {
                 <br />
 
 
-                <input type='submit' value='Submit' />
+                <input className="button" type='submit' value='Submit' />
 
                 <ReCaptcha
                     sitekey='6LcNJMYUAAAAAC0y9fEVN3DI-5uD8iSvydiOKxCf'
