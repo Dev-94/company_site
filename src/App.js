@@ -6,7 +6,6 @@ import Form from './Components/Form'
 
 import './App.css';
 
-// pretty-operation.surge.sh
 
 class App extends React.Component {
 
